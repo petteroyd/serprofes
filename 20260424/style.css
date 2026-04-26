@@ -1,43 +1,148 @@
-/* AGREGANDO SITIOS A LAS TARJETAS */
-/*  1. RESETEO BASICO */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* BODY */
 body {
-    background-color: #f0f2f5;
-    padding: 50px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5fdfc;
+    color: #1f2937;
+    padding: 40px 20px;
 }
 
-/* 2. REPASO FLEXBOX */
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #6b7280;
+}
+
+/* CONTENEDOR */
 .contenedor-tarjetas {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* 3. DISEÑO BASE DE LA TARJETA */
+/* TARJETAS BASE */
 .tarjeta {
-    background-color: white;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    width: 320px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 300px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
-
-.tarjeta:hover{
+.tarjeta:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* PRECIO */
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
 
+.precio span {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
 
+/* FEATURES */
+.features {
+    list-style: none;
+    margin: 20px 0;
+}
 
+.features li {
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+/* BOTONES */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #e5e7eb;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d1d5db;
+}
+
+/* BOTÓN PRO */
+.btn-principal {
+    background: aquamarine;
+    color: #065f46;
+    font-weight: bold;
+}
+
+.btn-principal:hover {
+    background: #7fffd4;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: aquamarine;
+    color: #065f46;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* TARJETA DESTACADA */
+.destacada {
+    border: 2px solid aquamarine;
+}
+
+/* PREMIUM */
+.premium {
+    background: linear-gradient(135deg, #7fffd4, #5eead4);
+    color: #022c22;
+    transform: scale(1.05);
+}
+
+.premium .features li {
+    color: #022c22;
+}
+
+/* BADGE PREMIUM */
+.premium-badge {
+    background: #022c22;
+    color: aquamarine;
+}
+
+/* BOTÓN PREMIUM */
+.btn-premium {
+    background: #022c22;
+    color: aquamarine;
+    font-weight: bold;
+}
+
+.btn-premium:hover {
+    background: #064e3b;
+}

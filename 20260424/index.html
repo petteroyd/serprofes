@@ -3,33 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjetas Premium Flexbox</title>
+    <title>Planes de IA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
         
-    <header style="text-align: center; margin-top: 20px;">
+    <header class="header">
         <h2>Nuestros planes de IA</h2>
+        <p>Elige el plan que mejor se adapte a tus necesidades</p>
     </header>
 
     <main class="contenedor-tarjetas">
         
+        <!-- PLAN BÁSICO -->
         <article class="tarjeta">
             <h3>Plan Básico</h3>
-            <p class="precio">Gratis</p>
-            <p>Ideal para probar nuestra IA con 50 mensajes al día.</p>
-            <button>Elegir Plan</button>
+
+            <div class="precio">
+                Gratis <span>/mes</span>
+            </div>
+
+            <ul class="features">
+                <li>Acceso limitado</li>
+                <li>50 mensajes al día</li>
+                <li>Soporte básico</li>
+            </ul>
+
+            <button class="btn">Elegir Plan</button>
         </article>
     
-        <article class="tarjeta">
+        <!-- PLAN PRO DESTACADO -->
+        <article class="tarjeta destacada">
+
+            <div class="badge">Recomendado</div>
+
             <h3>Plan Pro</h3>
-            <p class="precio">15€ / mes</p>
-            <p>Mensajes ilimitados y respuestas rápidas.</p>
-            <button class="btn-destacado">Elegir Plan Pro</button>
+
+            <div class="precio">
+                15€ <span>/mes</span>
+            </div>
+
+            <ul class="features">
+                <li>Mensajes ilimitados</li>
+                <li>Respuestas rápidas</li>
+                <li>Soporte prioritario</li>
+            </ul>
+
+            <button class="btn btn-principal">Elegir Plan Pro</button>
         </article>
 
+        <!-- PLAN PREMIUM -->
+        <article class="tarjeta premium">
+
+            <div class="badge premium-badge">Mejor opción</div>
+
+            <h3>Plan Premium</h3>
+
+            <div class="precio">
+                29€ <span>/mes</span>
+            </div>
+
+            <ul class="features">
+                <li>Acceso total a todas las funciones</li>
+                <li>Velocidad máxima de respuesta</li>
+                <li>Capacidad extendida</li>
+                <li>Soporte 24/7 prioritario</li>
+            </ul>
+
+            <button class="btn btn-premium">Elegir Premium</button>
+        </article>
 
     </main>
+
 </body>
 </html>
