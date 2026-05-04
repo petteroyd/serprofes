@@ -107,21 +107,9 @@ nav ul li a:hover {
 
 /* EFECTO BOTÓN */
 .btn:hover {
+    background: #ffe5de;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* BOTÓN LOGIN (MÁS SUAVE) */
-.login-btn {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    color: #ffd6c9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 /* CONTENIDO */
@@ -150,6 +138,7 @@ nav ul li a:hover {
     right: 8%;
     bottom: 0;
     width: 510px;
+    pointer-events: none;
 }
 
 /* ANIMACIÓN SIMPLE */
@@ -163,8 +152,12 @@ nav ul li a:hover {
 .anim:nth-child(2) { animation-delay: 0.4s; }
 .anim:nth-child(3) { animation-delay: 0.6s; }
 
-/*Aplicamos la pelicula a tosos los que tengan clase
+/*Aplicamos la pelicula a todos los que tengan clase
 anim*/
+
+.content h1 {
+    animation-delay: 0.5s;
+}
 .content p { 
     animation-delay: 0.5s;
 }
@@ -173,6 +166,297 @@ anim*/
 }
 .feature-img.anim {
     animation-delay: 1.5s;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* TÍTULO */
+.how h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+/* BLOQUE IMAGEN */
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMAGEN */
+.step img {
+    width: 800px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER SUTIL */
+.step img:hover {
+    transform: scale(1.03);
+}
+
+/* TEXTO (PIE DE IMAGEN) */
+.step p {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #ffe5de;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* =========================
+   JOIN FORM
+========================= */
+
+.join {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* TARJETA */
+.form-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* TITULO */
+.form-card h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #ffe5de;
+    margin-bottom: 30px;
+}
+
+/* INPUTS */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    color: #ffd6c9;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    transition: 0.3s;
+}
+
+/* EFECTO FOCUS */
+.input-group input:focus {
+    background: rgba(255,255,255,0.25);
+}
+
+/* BOTÓN */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: #ff2e63;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    background: #ffe5de;
+}
+
+/* LINK LOGIN */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ffe5de;
+}
+
+.login-link a {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   ABOUT US
+========================= */
+
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* CONTENEDOR */
+.about-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+/* TITULO */
+.about h1 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* INTRO */
+.about-intro {
+    font-size: 1.1rem;
+    color: #ffe5de;
+    margin-bottom: 40px;
+}
+
+/* BLOQUES */
+.about-block {
+    margin-bottom: 30px;
+}
+
+/* TITULOS SECUNDARIOS */
+.about-block h3 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.about-block p {
+    font-size: 1rem;
+    color: #ffd6c9;
+    line-height: 1.6;
+}
+
+/* =========================
+   PRIVACY
+========================= */
+
+.privacy {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+/* CONTENEDOR */
+.privacy-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+/* TITULO */
+.privacy h1 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* INTRO */
+.privacy-intro {
+    font-size: 1.1rem;
+    color: #ffe5de;
+    margin-bottom: 40px;
+}
+
+/* BLOQUES */
+.privacy-block {
+    margin-bottom: 30px;
+}
+
+/* SUBTÍTULOS */
+.privacy-block h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.privacy-block p {
+    font-size: 0.95rem;
+    color: #ffd6c9;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER (HORIZONTAL PRO)
+========================= */
+
+.footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px 8%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CONTENEDOR FLEX */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* IZQUIERDA */
+.footer-left h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer-left p {
+    font-size: 0.8rem;
+    color: #ffd6c9;
+}
+
+/* REDES */
+.footer-social a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffe5de;
+}
+
+/* DERECHA */
+.footer-right p {
+    font-size: 0.8rem;
+    color: #ffd6c9;
 }
 
 @keyframes fadeUp {
