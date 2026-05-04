@@ -7,15 +7,28 @@
 
 /* BODY */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
     background: linear-gradient(135deg, #e3a091, #ff2e63);
     color: rgb(111, 16, 89);
+}
+
+.make {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.friends {
+    font-weight: 700;
+    font-size: 60px;
+
 }
 
 .neon {
     font-family: 'Pacifico', cursive;
     color: #ffffff;
-    font-size: 80px;
+    font-size: 60px;
+    animation: glow 2s ease-in-out infinite alternate;
     
     /* efecto luz blanca + aura naranja/roja */
     text-shadow:
@@ -26,10 +39,6 @@ body {
         0 0 60px #ff2e63;
 
     letter-spacing: 2px;
-}
-
-.neon {
-    animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -108,6 +117,7 @@ nav ul li a:hover {
     text-decoration: none;
     margin-right: 10px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .login-btn:hover {
@@ -153,6 +163,18 @@ nav ul li a:hover {
 .anim:nth-child(2) { animation-delay: 0.4s; }
 .anim:nth-child(3) { animation-delay: 0.6s; }
 
+/*Aplicamos la pelicula a tosos los que tengan clase
+anim*/
+.content p { 
+    animation-delay: 0.5s;
+}
+.content .btn {
+    animation-delay: 1s;
+}
+.feature-img.anim {
+    animation-delay: 1.5s;
+}
+
 @keyframes fadeUp {
     to {
         opacity: 1;
@@ -176,3 +198,4 @@ nav ul li a:hover {
         font-size: 2rem;
     }
 }
+
