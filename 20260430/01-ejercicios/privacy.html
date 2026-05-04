@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="hero">
         <nav>
             <img src="assets/images/logo.png" class="logo" alt="logo">
@@ -24,79 +25,90 @@
                 <a href="#" class="btn">Download App</a>
             </div>
         </nav>
-        
-        <section class="privacy">
 
-            <div class="privacy-content">
+        <main>
+            <section class="privacy">
 
-                <h1>Privacy Policy</h1>
+                <div class="privacy-content">
 
-                <p class="privacy-intro">
-                    Your privacy matters to us. This page explains how we collect, use and protect your information.
-                </p>
+                    <h1>Privacy Policy</h1>
 
-                <div class="privacy-block">
-                    <h3>Information We Collect</h3>
-                    <p>
-                        We may collect basic information such as your name, email address and usage data to improve your
-                        experience.
+                    <p class="privacy-intro">
+                        Your privacy matters to us. This page explains how we collect, use and protect your information.
                     </p>
+
+                    <div class="privacy-block">
+                        <h3>Information We Collect</h3>
+                        <p>
+                            We may collect basic information such as your name, email address and usage data to improve your experience.
+                        </p>
+                    </div>
+
+                    <div class="privacy-block">
+                        <h3>How We Use Your Data</h3>
+                        <p>
+                            Your data is used to provide our services, personalize your experience and help you connect with other users.
+                        </p>
+                    </div>
+
+                    <div class="privacy-block">
+                        <h3>Data Protection</h3>
+                        <p>
+                            We take reasonable measures to protect your personal information and keep it secure.
+                        </p>
+                    </div>
+
+                    <div class="privacy-block">
+                        <h3>Your Rights</h3>
+                        <p>
+                            You can request access, modification or deletion of your personal data at any time.
+                        </p>
+                    </div>
+
+                    <div class="privacy-block">
+                        <h3>Contact</h3>
+                        <p>
+                            If you have any questions, contact us at support@sociality.com
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="privacy-block">
-                    <h3>How We Use Your Data</h3>
-                    <p>
-                        Your data is used to provide our services, personalize your experience and help you connect with
-                        other users.
-                    </p>
-                </div>
+            </section>
+        </main>
+    </div>
 
-                <div class="privacy-block">
-                    <h3>Data Protection</h3>
-                    <p>
-                        We take reasonable measures to protect your personal information and keep it secure.
-                    </p>
-                </div>
+    <!-- FOOTER FUERA -->
+    <footer class="footer">
 
-                <div class="privacy-block">
-                    <h3>Your Rights</h3>
-                    <p>
-                        You can request access, modification or deletion of your personal data at any time.
-                    </p>
-                </div>
+        <div class="footer-container">
 
-                <div class="privacy-block">
-                    <h3>Contact</h3>
-                    <p>
-                        If you have any questions, contact us at support@sociality.com
-                    </p>
-                </div>
-
+            <div class="footer-left">
+                <h3>Sociality</h3>
+                <p>Connect with people around the world</p>
             </div>
 
-        </section>
-        <footer class="footer">
-
-            <div class="footer-container">
-        
-                <div class="footer-left">
-                    <h3>Sociality</h3>
-                    <p>Connect with people around the world</p>
-                </div>
-        
-                <div class="footer-social">
-                    <a href="#">Instagram</a>
-                    <a href="#">X</a>
-                    <a href="#">Facebook</a>
-                </div>
-        
-                <div class="footer-right">
-                    <p>© 2026 Sociality</p>
-                </div>
-        
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">Facebook</a>
             </div>
+
+            <div class="footer-right">
+                <p>© 2026 Sociality</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
         
-        </footer>
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+        </script>
 
 </body>
 

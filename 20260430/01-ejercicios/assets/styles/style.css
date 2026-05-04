@@ -173,48 +173,106 @@ anim*/
 ========================= */
 
 .how {
+    padding: 40px 8%;
     text-align: center;
-    padding: 40px 20px;
 }
 
-/* TÍTULO */
+/* TITULO */
 .how h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    font-style: italic;
-    color: white;
-    margin-bottom: 50px;
-    line-height: 1.2;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* BLOQUE IMAGEN */
-.step {
+/* SUBTITULO */
+.how-subtitle {
+    color: #ffe5de;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+/* CONTENEDOR DE PASOS */
+.steps {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ENTRADA SUAVE */
+.step-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 20px;
+    width: 260px;
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: all 0.35s ease;
+}
+
+/* DELAY PROGRESIVO */
+.step-card:nth-child(1) { animation-delay: 0.2s; }
+.step-card:nth-child(2) { animation-delay: 0.4s; }
+.step-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* EFECTO HOVER */
+.step-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25),
+        0 0 20px rgba(255, 94, 58, 0.2);
 }
 
 /* IMAGEN */
-.step img {
-    width: 800px;
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    transition: 0.3s;
+.step-card img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 20px;
+
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 }
 
-/* EFECTO HOVER SUTIL */
-.step img:hover {
-    transform: scale(1.03);
+/* TITULO DE TARJETA */
+.step-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-/* TEXTO (PIE DE IMAGEN) */
-.step p {
-    margin-top: 25px;
-    font-size: 1.1rem;
-    color: #ffe5de;
-    max-width: 400px;
-    line-height: 1.6;
+/* TEXTO */
+.step-card p {
+    font-size: 0.9rem;
+    color: #ffd6c9;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .how h1 {
+        font-size: 2rem;
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        width: 90%;
+    }
 }
 
 /* =========================
@@ -459,27 +517,130 @@ anim*/
     color: #ffd6c9;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* =========================
+   IMAGE ZOOM MODAL
+========================= */
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 9999; /* 🔥 ESTO ES LA CLAVE */
+}
+
+/* ACTIVO */
+.image-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* IMAGEN GRANDE */
+.image-modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+/* ANIMACIÓN */
+.image-modal.active img {
+    transform: scale(1);
+}
+
+/* CURSOR */
+.step-card img {
+    cursor: pointer;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
     nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+
+        width: 200px;
+        background: rgba(0,0,0,0.9);
+        backdrop-filter: blur(10px);
+
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+
         display: none;
     }
 
-    .feature-img {
-        position: static;
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    .content h1 {
-        font-size: 2rem;
+    nav ul.active {
+        display: flex;
     }
 }
 
+@media (max-width: 768px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .make,
+    .friends {
+        font-size: 40px;
+    }
+
+    .neon {
+        font-size: 45px;
+    }
+
+    .feature-img {
+        position: relative;   /* 🔥 CAMBIO CLAVE */
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto 0;
+        right: auto;
+        bottom: auto;
+    }
+}

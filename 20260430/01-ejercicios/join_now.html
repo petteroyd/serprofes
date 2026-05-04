@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="hero">
         <nav>
             <img src="assets/images/logo.png" class="logo" alt="logo">
@@ -24,59 +25,73 @@
                 <a href="#" class="btn">Download App</a>
             </div>
         </nav>
-        <section class="join">
-            <div class="form-card">
-        
-                <h1>Create your account</h1>
-                <p class="subtitle">Start meeting new people today</p>
-        
-                <form>
-                    <div class="input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="John Doe">
-                    </div>
-        
-                    <div class="input-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="john@email.com">
-                    </div>
-        
-                    <div class="input-group">
-                        <label>Password</label>
-                        <input type="password" placeholder="••••••••">
-                    </div>
-        
-                    <button class="btn-submit">Join Now</button>
-                </form>
-        
-                <p class="login-link">
-                    Already have an account? <a href="#">Log in</a>
-                </p>
-        
-            </div>
-        </section>
-        <footer class="footer">
 
-            <div class="footer-container">
-        
-                <div class="footer-left">
-                    <h3>Sociality</h3>
-                    <p>Connect with people around the world</p>
+        <main>
+            <section class="join">
+                <div class="form-card">
+
+                    <h1>Create your account</h1>
+                    <p class="subtitle">Start meeting new people today</p>
+
+                    <form>
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="john@email.com">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+
+                        <button class="btn-submit">Join Now</button>
+                    </form>
+
+                    <p class="login-link">
+                        Already have an account? <a href="#">Log in</a>
+                    </p>
+
                 </div>
-        
-                <div class="footer-social">
-                    <a href="#">Instagram</a>
-                    <a href="#">X</a>
-                    <a href="#">Facebook</a>
-                </div>
-        
-                <div class="footer-right">
-                    <p>© 2026 Sociality</p>
-                </div>
-        
+            </section>
+        </main>
+    </div>
+
+    <!-- FOOTER FUERA -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h3>Sociality</h3>
+                <p>Connect with people around the world</p>
             </div>
+
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">Facebook</a>
+            </div>
+
+            <div class="footer-right">
+                <p>© 2026 Sociality</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
         
-        </footer>
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
 
 </body>
 

@@ -10,6 +10,13 @@
 </head>
 
 <body>
+
+    <!-- MODAL -->
+    <div class="image-modal" id="imageModal">
+        <img id="modalImg">
+    </div>
+
+    <!-- HERO -->
     <div class="hero">
         <nav>
             <img src="assets/images/logo.png" class="logo" alt="logo">
@@ -21,44 +28,92 @@
                 <li><a href="join_now.html">Join Now</a></li>
             </ul>
             <div>
-                <a href="#" class="btn">Download App</a>
+                <button class="btn">Download App</button>
             </div>
         </nav>
 
-        <section class="how">
-            <h1>Get started in three easy steps</h1>
+        <main>
+            <section class="how">
 
-            <div class="step">
-                <img src="assets/images/movil.png">
-                <p>
-                    Start your journey in seconds. Download the app, create your account and begin connecting with
-                    people all over the world.
+                <h1>Start meeting new people today</h1>
+                <p class="how-subtitle">
+                    It only takes a few seconds to get started
                 </p>
+
+                <div class="steps">
+
+                    <div class="step-card">
+                        <img src="assets/images/download.png" alt="Download app">
+                        <h3>1. Download</h3>
+                        <p>Get the app and install it in seconds.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <img src="assets/images/join_now.png" alt="Create account">
+                        <h3>2. Create your account</h3>
+                        <p>Sign up and set up your profile easily.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <img src="assets/images/chat.png" alt="Start chatting">
+                        <h3>3. Start chatting</h3>
+                        <p>Connect and talk with people instantly.</p>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h3>Sociality</h3>
+                <p>Connect with people around the world</p>
             </div>
 
-        </section>
-        <footer class="footer">
-
-            <div class="footer-container">
-        
-                <div class="footer-left">
-                    <h3>Sociality</h3>
-                    <p>Connect with people around the world</p>
-                </div>
-        
-                <div class="footer-social">
-                    <a href="#">Instagram</a>
-                    <a href="#">X</a>
-                    <a href="#">Facebook</a>
-                </div>
-        
-                <div class="footer-right">
-                    <p>© 2026 Sociality</p>
-                </div>
-        
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">Facebook</a>
             </div>
+
+            <div class="footer-right">
+                <p>© 2026 Sociality</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        document.querySelectorAll(".step-card img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.add("active");
+                modalImg.src = img.src;
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+    </script>
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
         
-        </footer>
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+        </script>
+
 </body>
-
 </html>
