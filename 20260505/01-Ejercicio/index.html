@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de descuestos</title>
+    <!-- 1.- Conexión con el duseño CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 2.- Conexión con el duseño JS usando DEFER -->
+     <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="card">
+        <h2>Calculadora de descuestos</h2>
+        <label> Precio Original (€)</label>
+        <input type="number" id="precio" placeholder="Ej. 100">
+        <br>
+        <label> Descuento (%)</label>
+        <input type="numbre" id="descuento" placeholder="Ej. 20">
+        <br>
+        <!-- El evento onclick llama a nuestra funcion en JS -->
+         <button onclick="CalcularPrecioFinal()">Calcular Precio Final</button>
+         <br>
+         <p class="parrafo"> El precio final es:</p>
+         <p class="resultado" id="texto-resultado">0.00€</p>
+    </div>
+</body>
+</html>
