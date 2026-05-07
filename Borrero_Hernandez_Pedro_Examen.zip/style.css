@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f0f2f5;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor-principal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 320px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.nombre {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.profesion {
+    color: rgb(126, 119, 119);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contacto {
+    background-color: #3cabbf;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto:hover {
+    background-color: #148f9b;
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .tarjeta {
+        width: 100%;
+    }
+
+    .nombre {
+        font-size: 28px; 
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+}
