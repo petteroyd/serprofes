@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* Letra de codigo de juego */
+    font-family: 'Courier New', Courier, monospace;
+    background: #2c3e50;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background: #ecf0f1;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    border: 5px solid #34495e;
+}
+
+h2{
+    color: #e74c3c;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.instrucciones{
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#texto_vidas{
+    color: #c0392b;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 3px solid #bdc3c7;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 9px;
+}
+
+#btn_jugar{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    background: #fa0a0a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+#btn_jugar:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#btn_jugar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    filter: brightness(0.9);
+}
+
+.resultado{
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
