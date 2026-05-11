@@ -67,6 +67,8 @@ input{
     font-size: 1.05rem;
     transition: 0.3s ease;
     width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #btn_jugar:hover{
@@ -81,7 +83,10 @@ input{
 }
 
 .resultado{
-    color: #7f8c8d;
-    margin-bottom: 10px;
+    color: #34495E;
     font-weight: bold;
+    font-size: 1.2rem;
+    min-height: 60px;
+    margin-top: 25px;
 }
+
