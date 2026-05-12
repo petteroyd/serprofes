@@ -12,5 +12,6 @@ function añadir_al_carrito(){
     // Volvemos a pintar la cesta para que se vea
     document.getElementById("pantalla_cesta").textContent = carrito.join(" - ");
     // Limpiamos el input
-    document.getElementById("nuevo_item").value = "";
+    document.getElementById("nuevoitem").value = "";
 }
+
