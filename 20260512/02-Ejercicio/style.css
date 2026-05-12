@@ -12,6 +12,7 @@ body {
     padding: 40px;
     justify-content: center;
 }
+
 .ticket {
     background: white;
     border: 2px solid #333;
@@ -20,23 +21,54 @@ body {
     width: 250px;
     box-shadow: 5px 5px 0px #333;
 }
+
+h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
 #lista_productos {
     font-weight: bold;
     color: #007acc;
 }
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 button {
-    background: #28a745;
+    background: #007acc;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+    font-weight: bold;
 }
 
-.total{
+button:hover {
+    background: #005fa3;
+
+}
+
+.total {
+    font-size: 1.8rem;
     font-weight: bold;
-    background: white;
-    padding: 20px;
+    color: #e74c3c;
+    text-align: right;
+    margin-top: 20px;
 }
