@@ -18,7 +18,7 @@ body {
     border: 2px solid #333;
     border-radius: 10px;
     padding: 20px;
-    width: 250px;
+    width: 350px;
     box-shadow: 5px 5px 0px #333;
 }
 
@@ -66,6 +66,14 @@ button:hover {
 }
 
 .total {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.IVA {
     font-size: 1.8rem;
     font-weight: bold;
     color: #e74c3c;

@@ -1,32 +1,40 @@
-// 1.- El objeto
-// Usamos llaves {} para crear la ficha técnica
-// y dos puntos para dar valor
+// 1.- Nuestro super ARRAY (Array lleno de objetos)
+const carrito = [
+    {nombre: "🥖 Pan de barra", precio:1.20}, // Elemento 1
+    {nombre: "🥛 Leche entera", precio:0.90},
+    {nombre: "🥚 Huevos campero", precio:2.50},
+    {nombre: "🥑 Aguacate", precio:1.00},
+    {nombre: "🥓 Bacon", precio:1.10 },
+    {nombre: "🧀 Queso Gouda", precio:2.20 },
+];
 
-let producto = {
-    nombre: "🍎 Manzanas",
-    precio: 2.5,
-    categoria: "Fruta",
-};
+// Código de apoyo visual
 
-// 2.- ¿Cómo leemos un dato concreto y lo mandamos
-// al html?
+let lista_HTML = document.getElementById("lista_producto");
 
-document.getElementById("prod_nombre").textContent = producto.nombre;
-document.getElementById("prod_precio").textContent = producto.precio;
-document.getElementById("prod_cat").textContent = producto.categoria;
+for(let i = 0; i < carrito.length;i++){
+    // Usamos carrito[i].nombre para sacar el dato en cada vuelta
+    lista_HTML.innerHTML += `
+    <li><span>${carrito[i].nombre}</span>
+    <span>${carrito[i].precio.toFixed(2)}€</span>
+    `
+}
 
-function mostrar_mi_ficha() {
-    // 1.- Crea tu propio objeto "alumno"
-    // 2.- Mostrar los datos en html
+// La función cobrar
+function cobrar(){
+    // 1.- Creamos una variable = acumulador
+    let suma_total = 0;
+    // 2.- Creamos un bucle for para recorrer el array
+    for (let i = 0; i< carrito.length; i++){
+        // En cada vuelta le sumamos al "suma_total" el precio
+        suma_total = suma_total + carrito[i].precio;
+    }
 
-    let alumno = {
-        nombre: "Pedro",
-        edad: "42",
-        ciudad: "Madrid",
-    };
+    // 3.- Mostramos el resultado final en HTML
+    document.getElementById("resultado_IVA").textContent =
+    "IVA: " + suma_total.toFixed(2) + " €";
 
-document.getElementById("alum_nombre").textContent = alumno.nombre;
-document.getElementById("alum_edad").textContent = alumno.edad;
-document.getElementById("alum_ciudad").textContent = alumno.ciudad;
+    document.getElementById("resultado_total").textContent =
+    "Total: " + suma_total.toFixed(2) + " €";
 
 }
