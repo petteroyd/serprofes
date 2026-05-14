@@ -27,12 +27,21 @@ function cobrar(){
     // 2.- Creamos un bucle for para recorrer el array
     for (let i = 0; i< carrito.length; i++){
         // En cada vuelta le sumamos al "suma_total" el precio
+    
         suma_total = suma_total + carrito[i].precio;
+
     }
 
+    subtotal = suma_total / 1.21;
+    precio_IVA = suma_total - subtotal;
+
+
     // 3.- Mostramos el resultado final en HTML
+    document.getElementById("subtotal").textContent =
+    "Sub-Total: " + subtotal.toFixed(2) + " €";
+
     document.getElementById("resultado_IVA").textContent =
-    "IVA: " + suma_total.toFixed(2) + " €";
+    "IVA (21%): " + precio_IVA.toFixed(2) + " €";
 
     document.getElementById("resultado_total").textContent =
     "Total: " + suma_total.toFixed(2) + " €";

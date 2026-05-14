@@ -65,6 +65,12 @@ button:hover {
 
 }
 
+.subtotal{    
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+
 .total {
     font-size: 1.8rem;
     font-weight: bold;
@@ -74,9 +80,7 @@ button:hover {
 }
 
 .IVA {
-    font-size: 1.8rem;
     font-weight: bold;
-    color: #e74c3c;
     text-align: right;
     margin-top: 20px;
 }
