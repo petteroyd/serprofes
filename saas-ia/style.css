@@ -1,6 +1,6 @@
 /* CSS PROYECTO SAAS */
 /* PRIMER PASO RESETEAR Y BASES */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,26 +8,33 @@
 }
 
 /* SEGUNDO PASO LAYOUT PRINCIPAL (Flexbox) */
-.app-container{
-    display: flex;                      /* Ponemos Sidebar y chat en fila */
-    height: 100vh;                      /* Ocupar el 100% de la altura de la ventana */
-    overflow: hidden;                   /* Evita que la web entera haga scroll */
+.app_container {
+    display: flex;
+    /* Ponemos Sidebar y chat en fila */
+    height: 100vh;
+    /* Ocupar el 100% de la altura de la ventana */
+    overflow: hidden;
+    /* Evita que la web entera haga scroll */
 }
 
 
 /*  TERCER PASO SIDEBAR (Barra lateral) */
 
-.sidebar{
-    width: 260px;                       /* Ancho fijo para el menú */
-    background-color: #202123;        /* Color oscuro tipo CHATGPT */
+.sidebar {
+    width: 260px;
+    /* Ancho fijo para el menú */
+    background-color: #202123;
+    /* Color oscuro tipo CHATGPT */
     color: #ffff;
     display: flex;
-    flex-direction: column;             /* Los elemntos del menú van */
-    justify-content: space-between;     /* logo arriba, perfil abajo */
+    flex-direction: column;
+    /* Los elemntos del menú van */
+    justify-content: space-between;
+    /* logo arriba, perfil abajo */
     padding: 15px;
 }
 
-.menu-lateral button{
+.menu_lateral button {
     width: 100%;
     padding: 12px;
     background: transparent;
@@ -38,96 +45,223 @@
     margin-bottom: 20px;
 }
 
+.historial ul {
+    margin-top: 10px;
+    padding-left: 20px;
+
+}
+
+.historial li {
+    margin-bottom: 8px;
+}
+
 /* CUARTO PASO AREA DE CHAT (Zona Central) */
-.chat-area{
-    flex-grow: 1;                      /* Ocupa todo el espacio */
+.chat_area {
+    flex-grow: 1;
+    /* Ocupa todo el espacio */
     display: flex;
-    flex-direction: column;            /* Cabecera arriba, mensaje centro, input abajo */
+    flex-direction: column;
+    /* Cabecera arriba, mensaje centro, input abajo */
     background-color: #343541;
 }
 
-.chat-header{
+.chat_header {
     padding: 15px;
     border-bottom: 1px solid #4d4d4f;
     color: #ececf1;
     text-align: center;
 }
 
-.mensajes-container{
-    flex-grow: 1;                       /* Mensaje ocupan el centro */
+.controles_filtros {
+    text-align: center;
+    padding: 10px;
+    background-color: #202123;
+    border-bottom: 1px solid #4d4d4f;
+}
+
+.controles_filtros button {
+    background: #444654;
+    color: white;
+    border: 1px solid #565869;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controles_filtros button:hover {
+    background-color: #565869;
+
+}
+
+.mensajes_container {
+    flex-grow: 1;
+    /* Mensaje ocupan el centro */
     padding: 40px;
     display: flex;
-    justify-content: center;            /* Centra horizontalmente */
-    align-items: center;                /* Centra el contenido verticalmente */
+    flex-direction: column;
+    /* Se agrega el flex-direction : column por ser chat */
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-y: auto;
 }
 
-.mensaje-ia{
-    color: #d1d5db;
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+.msg_usuario, .msg_ia {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 80%;
+    width: fit-content;
+    line-height: 1.5;
+    transition: all o.3s ease;
 }
+
+/* La burbuja de usuario se alinea a la izquierda */
+.msg_usuario {
+    background-color: #19c37d;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Se alinea a la izquierda */
+.msg_ia {
+    background-color: #444654;
+    color: #d1d1d1;
+    align-self: flex-start;
+}
+
 /* QUINTO PASO FORMULARIO DE ENTRADA (input) */
 
-.input-area{
+.input_area {
     padding: 20px 40px;
 }
 
-.chat-form{
+.chat_form {
     max-width: 700px;
-    margin: 0 auto;                     /* Centra el formulario en el medio */
-    display: flex;                      /* El input y el boton en fila */
+    margin: 0 auto;
+    /* Centra el formulario en el medio */
+    display: flex;
+    /* El input y el boton en fila */
     background-color: #40414f;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.chat-form input{
-    flex-grow:  1;                      /* Estira todo lo que puede dentro de la caja */
+.chat_form input {
+    flex-grow: 1;
+    /* Estira todo lo que puede dentro de la caja */
     background-color: transparent;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     color: #ffff;
+    font-size: 1rem;
 }
 
-.chat-form button{
+.chat_form button {
     cursor: pointer;
-    background-color: white;
+    background-color: #19c37d;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
-    color: black;
+    color: white;
+    transition: 0.3s;
 }
-@media (max-width: 768px){
-    .sidebar{
+
+.chat_form button:hover {
+    opacity: 0.9;
+}
+
+.sr_only {
+    position: absolute;
+    left: -9999px;
+}
+
+/*Boton Peligro (Borrar)*/
+.controles_filtros .btn_peligro {
+    background-color: #e74c3c;
+    border: 1px solid #c0392b;
+}
+
+.controles_filtros .btn_peligro:hover {
+    background-color: #c0392b;
+}
+
+/*Boton Buscador  */
+.buscador_container {
+    text-align: center;
+    padding: 10px;
+    background-color: #202123;
+    border-bottom: 1px solid #4d4d4f;
+}
+
+.buscador_container input {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    width: 60%;
+    max-width: 400px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.buscador_container button {
+    background-color: #19c37d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.buscador_container button:hover {
+    opacity: 0.9;
+}
+
+/*MAGIA RESPONSIVE - ADAPTANDO EL CHAT A MÓVILES*/
+
+/*Si la pantalla es de tamaño tablet
+o móvil (menos de 768px)
+*/
+
+@media (max-width: 768px) {
+    .sidebar {
         display: none;
     }
-    .mensajes-container{
+
+    .mensajes_container {
         padding: 20px;
     }
-    .input-area{
+
+    .input_area {
         padding: 15px;
     }
-    .chat-form{
-        flex-direction: row;
+
+    .chat_form {
         padding: 5px;
     }
-    .chat-form input{
+
+    .chat_form input {
         font-size: 0.9rem;
     }
-    .chat-form button{
+
+    .chat_form button {
         padding: 8px 12px;
     }
 }
 
-@media (max-width:480){
-    .chat-header h3{
-    font-size: 1.1rem;
-}
-    .mensaje-ia{
+@media (max-width:480) {
+    .chat_header h3 {
+        font-size: 1.1rem;
+    }
+
+    .msg-usuario, .msg-ia{
+        max-width: 90%;
         font-size: 0.95rem;
     }
 }

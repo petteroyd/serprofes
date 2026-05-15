@@ -8,17 +8,18 @@
         <link rel="stylesheet" href="style.css" />
         <!-- Realcionamos con el fichero app.js defer para que cargue junto al html -->
         <script src="app.js" defer></script>
+
     </head>   
 
     <body>
-    <div class="app-container">
+    <div class="app_container">
             <aside class="sidebar">
                 
-                <div class="logo-area">
+                <div class="logo_area">
                     <h2>IA Master</h2>
                 </div>
                 
-                <nav class="menu-lateral">
+                <nav class="menu_lateral">
                     <button>+ Nuevo Chat</button>
                     <div class="historial">
                         <p>Historia reciente ...</p>
@@ -34,19 +35,38 @@
                 </div>
             </aside>
 
-            <main class="chat-area">
-                <header class="chat-header">
+            <main class="chat_area">
+                <header class="chat_header">
                     <h3>Conversación Actual</h3>
                 </header>
-                <section class="mensajes-container">
-                    <div class="mensaje-ia">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+                <!-- Agregamos botones  -->
+                 <div class="controles_filtros">
+                    <button onclick="mostrar_todo()">Ver Todo</button>
+                    <button onclick="ver_mis_mensajes()">Mis Mensajes</button>
+                    <button onclick="modo_gritar()">Modo Mayúsculas</button>
+                    <button onclick="borrar()" class="btn_peligro">🗑 Borrar</button>
+                </div>
+                <div class="buscador_container">
+                    <input type="text" id="input_buscador" placeholder="Buscar...">
+                    <button onclick="buscar_mensaje()">🔍 Buscar</button>
+
+                </div>
+
+                <section class="mensajes_container" id="caja_mensajes">
                 </section>
                 
-                <footer class="input-area">
+                <footer class="input_area">
                     <!-- Evento Form se añade la función enviarPrompt -->
-                    <form class="chat-form" onsubmit="enviarPrompt(event)">
+                    <form class="chat_form" onsubmit="enviar_prompt(event)">
+                    
+                    <label for="mensaje_input" class="sr_only">Mensaje</label>
                         <!-- Añadir ID -->
-                        <input type="text" id="mensaje-input" placeholder="Escribe tu pregunta aqui ...">
+                        <input 
+                        type="text" 
+                        id="mensaje_input" 
+                        placeholder="Escribe tu pregunta aqui ..."
+                        autocomplete="off"
+                        >
                         <!-- Añadir tipo submit -->
                         <button type="submit" >Enviar</button>
                     </form>
